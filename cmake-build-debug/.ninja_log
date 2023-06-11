@@ -1,0 +1,14 @@
+# ninja log v5
+1	3628	7076787247432060	CMakeFiles/phone_book_c__.dir/main.cpp.obj	e6076f3b6f930373
+3633	4233	7076787253345144	phone_book_c__.exe	82c8b5db2142e6d5
+1	1029	7082046880568468	CMakeFiles/phone_book_c__.dir/main.cpp.obj	e6076f3b6f930373
+6	1219	7082068763027863	CMakeFiles/phone_book_c__.dir/main.cpp.obj	e6076f3b6f930373
+1220	1373	7082068764562339	phone_book_c__.exe	82c8b5db2142e6d5
+4	1117	7082074214814705	CMakeFiles/phone_book_c__.dir/main.cpp.obj	e6076f3b6f930373
+1117	1251	7082074216128429	phone_book_c__.exe	82c8b5db2142e6d5
+4	1013	7082074425836236	CMakeFiles/phone_book_c__.dir/main.cpp.obj	e6076f3b6f930373
+1049	1204	7082074427719640	phone_book_c__.exe	82c8b5db2142e6d5
+4	1030	7082074851472611	CMakeFiles/phone_book_c__.dir/main.cpp.obj	e6076f3b6f930373
+1030	1189	7082074853031854	phone_book_c__.exe	82c8b5db2142e6d5
+4	1021	7082074951468194	CMakeFiles/phone_book_c__.dir/main.cpp.obj	e6076f3b6f930373
+1021	1221	7082074953474498	phone_book_c__.exe	82c8b5db2142e6d5
