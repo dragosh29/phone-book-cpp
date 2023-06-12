@@ -16,7 +16,7 @@ public:
     void addContact();
     void searchContact();
     void modifyContact();
-
+    void reset();
 };
 
 void PhoneBook::searchContact() {
@@ -42,23 +42,31 @@ void PhoneBook::searchContact() {
 void PhoneBook::addContact() { /// add contact function to add a new contact to the vector and the file with push_back
     string name, address, father_name, mother_name, number, gender, mail;
     system("cls");
+    cin.ignore();  /// ignore the newline character in the input stream left by cin
+
     cout << "Enter name: ";
-    cin >> name;
+    getline(cin, name); /// getline is used to read a line of text from the input stream
+
     cout << "Enter address: ";
-    cin >> address;
+    getline(cin, address);
+
     cout << "Enter father's name: ";
-    cin >> father_name;
+    getline(cin, father_name);
+
     cout << "Enter mother's name: ";
-    cin >> mother_name;
+    getline(cin, mother_name);
+
     cout << "Enter telephone number: ";
-    cin >> number;
+    getline(cin, number);
+
     cout << "Enter gender: ";
-    cin >> gender;
+    getline(cin, gender);
+
     cout << "Enter email address: ";
-    cin >> mail;
+    getline(cin, mail);
 
     Contact contact(name, address, father_name, mother_name, number, gender, mail);
-    contacts.push_back(contact);
+    contacts.push_back(contact); /// add the contact to the vector
 
     ofstream outputFile("input.txt", ios::app);
     if (!outputFile) {
@@ -152,32 +160,34 @@ void PhoneBook::modifyContact() {
             // Modify the contact information
             string newAddress, newNumber, newName, newFatherName, newMotherName, newGender, newMail;
 
+            cin.ignore();  /// ignore the newline character in the input stream left by cin
+
             cout << "Enter the new name: ";
-            cin >> newName;
+            getline(cin, newName); /// getline is used to read a line of text from the input stream
             contact.setName(newName);
 
             cout << "Enter the new address: ";
-            cin >> newAddress;
+            getline(cin, newAddress);
             contact.setAddress(newAddress);
 
             cout << "Enter the new father's name: ";
-            cin >> newFatherName;
+            getline(cin, newFatherName);
             contact.setFatherName(newFatherName);
 
             cout << "Enter the new mother's name: ";
-            cin >> newMotherName;
+            getline(cin, newMotherName);
             contact.setMotherName(newMotherName);
 
             cout << "Enter the new telephone number: ";
-            cin >> newNumber;
+            getline(cin, newNumber);
             contact.setNumber(newNumber);
 
             cout << "Enter the new gender: ";
-            cin >> newGender;
+            getline(cin, newGender);
             contact.setGender(newGender);
 
             cout<< "Enter the new email address: ";
-            cin >> newMail;
+            getline(cin, newMail);
             contact.setMail(newMail);
 
             cout << "Contact modified successfully" << endl;
@@ -189,5 +199,18 @@ void PhoneBook::modifyContact() {
     if (!found) {
         cout << "Contact not found" << endl;
     }
+    system("pause");
+}
+
+void PhoneBook::reset() {
+    system("cls");
+    contacts.clear(); // Clear all contacts from the vector
+    ofstream outputFile("input.txt"); // Clear all contacts from the file
+    if (!outputFile) {
+        cout << "Error opening file" << endl;
+        return;
+    }
+    outputFile.close();
+    cout << "Phone book reset successfully" << endl;
     system("pause");
 }
